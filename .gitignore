@@ -1,0 +1,11 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+runs/
+.env
+.DS_Store
+._*
+run-stderr.txt
+PROJECT_CONTEXT.md
+PLAN.md

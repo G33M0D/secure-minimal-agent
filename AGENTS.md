@@ -2,7 +2,7 @@
 
 Project-specific instructions for any AI coding agent working in this repo (Claude Code, Codex,
 Gemini CLI). Global rules — secrets handling, `Projects/` layout, tracking-doc requirements — live
-in the drive-root `/Volumes/Archive/Claude/CLAUDE.md` and always apply on top of this file.
+in the drive-root `/Volumes/Workspace/Claude/CLAUDE.md` and always apply on top of this file.
 
 This repo is **public** (portfolio piece). Never add job-hunt-specific context here — that's why
 PROJECT_CONTEXT.md and PLAN.md are gitignored in this repo specifically; keep any new tracking

@@ -9,3 +9,4 @@ runs/
 run-stderr.txt
 PROJECT_CONTEXT.md
 PLAN.md
+.claude/

@@ -1,0 +1,34 @@
+Design a polished, premium infographic poster, landscape 3:2, like a top engineering agency's project overview. Rich, detailed flat-vector illustration with soft depth. Very light cool-grey page (#F3F4F5) with a faint thin square blueprint grid in the background, fading towards the bottom. Rounded white cards (#FFFFFF) with thin light-grey borders (#D5D9DD) and subtle shadows, generous spacing. Heavy bold geometric sans-serif headings in near-black ink (#101316), body text in dark slate (#343B42). One signal colour: deep green (#0A6A47), with a darker green (#06492F) and a pale green tint (#DCF0E6) for fills. Small section tabs are uppercase monospace labels with wide letter spacing in deep green. Icons are large, colourful, detailed illustrations in greens, slate and soft warm accents, not thin line icons. No real product logos anywhere: every object is generic, with no letters or logo on it. Spell every word exactly as written. Text large and crisp.
+
+LAYOUT: a header across the top. Below it, the left two-thirds of the poster holds three cards in a row (THE PROBLEM, THE GOAL, THE SOLUTION), then a wide HOW IT WORKS card, then a slim BUILT WITH strip. The right third is one tall dark IMPACT panel running from below the header to the bottom edge, the most eye-catching element on the poster.
+
+HEADER: big heavy ink title "secure-minimal-agent", all lowercase with two hyphens, spelled s-e-c-u-r-e, hyphen, m-i-n-i-m-a-l, hyphen, a-g-e-n-t. Follow it with a small solid green (#0A6A47) square, like a text cursor at rest. Subtitle below in slate: "A small AI agent that plans, uses only allowed tools and checks its own answer" (no full stop at the end).
+
+THE PROBLEM card: green monospace tab "THE PROBLEM" in the top-left corner. Illustration: a friendly robot frowning at a pocket calculator that shows a small red cross, and beside it a folded paper note with a sneaky hidden speech bubble tucked inside, with no letters or logo on any object. Text: "Language models can get money math wrong." / "Hidden instructions in a task can steer which tools an agent runs." (each card shows its text exactly once)
+
+THE GOAL card: green monospace tab "THE GOAL". Illustration: a neat stack of tidy white index cards with a large green check mark, and a short paper scroll beside them, with no letters on them. Text: "Turn one plain-English task into a typed JSON answer, with every step logged, in code small enough to read end to end." (each card shows its text exactly once)
+
+THE SOLUTION card: green monospace tab "THE SOLUTION". Four short rows, each with a small colourful illustrated icon on the left:
+a toolbox with a green padlock on its lid: "Deny-by-default tool allowlist"
+a pocket calculator with a green check mark, with no letters or logo on it: "A safe calculator does the math"
+a magnifying glass over a draft page with a green check and a small curved return arrow, with no letters on it: "A second model pass checks the answer"
+an open paper ledger with neat lines, with no letters on it: "Audit log of every step"
+(each card shows its text exactly once)
+
+HOW IT WORKS card: green monospace tab "HOW IT WORKS". Four steps in a horizontal row joined by bold green arrows, each step a big solid green (#0A6A47) circle with a white number, a colourful illustration above and a short bold label below:
+1. a small whiteboard where one arrow splits into several little boxes: "Plan 1 to 10 subtasks"
+2. a small gate letting a wrench and a calculator through, with a red cross over a third unknown tool held back: "Run only allowed tools"
+3. a clean document card with tidy rows, with no letters on it: "Write a typed JSON answer"
+4. a reviewer's rubber stamp with a green check and a curved arrow pointing back: "Critic accepts or sends it back"
+(each step shows its label exactly once)
+
+BUILT WITH strip: green monospace tab "BUILT WITH". A row of six rounded pill badges with a pale green tint (#DCF0E6) fill, thin green border and dark green text, text only, no logos: "Python", "Pydantic v2", "Anthropic SDK", "OpenAI SDK", "httpx", "pytest". Spelling: "Pydantic" is P-y-d-a-n-t-i-c; "httpx" is all lowercase h-t-t-p-x; "pytest" is all lowercase p-y-t-e-s-t.
+
+IMPACT panel (right third, tall): dark graphite fill (#15181B) with rounded corners and a soft glow, bright green (#5DD6A1) monospace tab "IMPACT" at the top. Three stat blocks stacked vertically, each with a huge bold bright green (#5DD6A1) number and a white caption below it, separated by thin dark-grey lines:
+"14 / 14" caption "tests pass offline, with no model or network calls"
+"0" caption "write-capable tools registered in the command-line app"
+"~570" caption "lines of Python for the agent and its command line"
+At the bottom of the panel, a rounded inset box with a thin bright green border, a small illustrated green shield on the left and white text: "In a recorded live run, a task hiding an 'ignore all previous instructions' attack got only its real currency question answered."
+(each block shows its text exactly once)
+
+No other text, no prices, no people's names, no watermark, no signature. Spell every word exactly as written.

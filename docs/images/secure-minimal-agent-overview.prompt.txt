@@ -12,7 +12,7 @@ THE SOLUTION card: green monospace tab "THE SOLUTION". Four short rows, each wit
 a toolbox with a green padlock on its lid: "Deny-by-default tool allowlist"
 a pocket calculator with a green check mark, with no letters or logo on it: "A safe calculator does the math"
 a magnifying glass over a draft page with a green check and a small curved return arrow, with no letters on it: "A second model pass checks the answer"
-an open paper ledger with neat lines, with no letters on it: "Audit log of every step"
+an open paper ledger with neat lines, with no letters on it: "Audit log of every step" (the first word is "Audit", spelled A-u-d-i-t, a capital A followed by lowercase u, d, i, t)
 (each card shows its text exactly once)
 
 HOW IT WORKS card: green monospace tab "HOW IT WORKS". Four steps in a horizontal row joined by bold green arrows, each step a big solid green (#0A6A47) circle with a white number, a colourful illustration above and a short bold label below:
@@ -25,9 +25,9 @@ HOW IT WORKS card: green monospace tab "HOW IT WORKS". Four steps in a horizonta
 BUILT WITH strip: green monospace tab "BUILT WITH". A row of six rounded pill badges with a pale green tint (#DCF0E6) fill, thin green border and dark green text, text only, no logos: "Python", "Pydantic v2", "Anthropic SDK", "OpenAI SDK", "httpx", "pytest". Spelling: "Pydantic" is P-y-d-a-n-t-i-c; "httpx" is all lowercase h-t-t-p-x; "pytest" is all lowercase p-y-t-e-s-t.
 
 IMPACT panel (right third, tall): dark graphite fill (#15181B) with rounded corners and a soft glow, bright green (#5DD6A1) monospace tab "IMPACT" at the top. Three stat blocks stacked vertically, each with a huge bold bright green (#5DD6A1) number and a white caption below it, separated by thin dark-grey lines:
-"14 / 14" caption "tests pass offline, with no model or network calls"
+"62 / 62" caption "tests pass offline, with no model or network calls" (the caption starts with two separate words, "tests" then a space then "pass", with no hyphen)
 "0" caption "write-capable tools registered in the command-line app"
-"~570" caption "lines of Python for the agent and its command line"
+"~820" caption "lines of Python for the agent and its command line"
 At the bottom of the panel, a rounded inset box with a thin bright green border, a small illustrated green shield on the left and white text: "In a recorded live run, a task hiding an 'ignore all previous instructions' attack got only its real currency question answered."
 (each block shows its text exactly once)
 

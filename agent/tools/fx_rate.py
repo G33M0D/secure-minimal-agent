@@ -1,7 +1,10 @@
 """External tool: live FX rates (keyless public API, HTTPS, pinned host).
 
-Network isolation: this module is the only place in the codebase that makes
-an outbound request, and it can only reach the single pinned host below.
+Network isolation: this is the only tool that makes an outbound request, and
+it can only reach the single pinned host below. (The model SDKs make their
+own requests to the model provider; no tool can.) The source refreshes its
+rates once a day and asks for attribution: "Rates By Exchange Rate API",
+https://www.exchangerate-api.com.
 """
 import httpx
 from pydantic import BaseModel, Field

@@ -56,3 +56,15 @@ def test_tool_exception_becomes_data_not_crash():
     result = reg.call("boom", {"text": "x"})
     assert not result.ok
     assert "upstream down" in result.error
+
+
+def test_unexpected_fields_are_rejected_not_dropped():
+    result = _registry().call("echo", {"text": "hello", "sneaky": "rm -rf /"})
+    assert not result.ok
+    assert "unexpected field" in result.error
+
+
+def test_non_object_input_is_rejected():
+    result = _registry().call("echo", ["hello"])
+    assert not result.ok
+    assert "must be a JSON object" in result.error

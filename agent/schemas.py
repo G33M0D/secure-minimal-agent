@@ -1,7 +1,11 @@
 """Typed contracts for every boundary in the agent.
 
-Every hop — planner output, tool input/output, final answer — is validated
-against one of these models. Nothing untyped crosses a boundary.
+Every model response (plan, tool binding, answer draft, verdict) is validated
+against one of these models, and every tool call against its tool's input
+schema in the registry. A few fields are free-form dicts on purpose: a tool's
+raw input (checked by that tool's schema at the registry), a tool's output
+data, and the answer's `result`, whose numbers the critic checks against the
+tool evidence.
 """
 from typing import Literal, Optional
 
@@ -33,13 +37,24 @@ class ToolCallRequest(BaseModel):
 
 
 class ToolResult(BaseModel):
-    """Uniform envelope for every tool call. Tool output is DATA — it is
-    carried in `data` and never interpolated into prompts as instructions."""
+    """Uniform envelope for every tool call. Tool output is DATA: it is
+    carried in `data` and only ever shown to the model inside a fenced,
+    labelled block that the system prompts treat as data."""
 
     tool: str
     ok: bool
     data: Optional[dict] = None
     error: Optional[str] = None
+
+
+class AnswerDraft(BaseModel):
+    """What the answering model writes. `task` and `tools_used` are not in
+    here on purpose: the code fills them from the real input and the tools
+    that actually ran, so the model cannot misreport either."""
+
+    result: dict
+    steps_taken: list[str] = Field(min_length=1)
+    caveats: list[str] = Field(default_factory=list)
 
 
 class Answer(BaseModel):
@@ -53,7 +68,8 @@ class Answer(BaseModel):
 
 
 class Validation(BaseModel):
-    """Self-validation verdict from the critic pass."""
+    """Self-validation verdict from the critic pass. The answer is accepted
+    only when `verdict` is "accept" AND `valid` is true."""
 
     valid: bool
     issues: list[str] = Field(default_factory=list)

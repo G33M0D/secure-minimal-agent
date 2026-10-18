@@ -4,8 +4,8 @@
     python main.py "Quote a landed price in PHP for a $120 USD order with $18 shipping"
 
 The provider is swappable (LLM_PROVIDER=anthropic|openai) because the agent
-core depends on an LLMClient interface, not a vendor SDK. Secrets are
-env-only, never logged.
+core depends on an LLMClient interface, not a vendor SDK. LLM_MODEL picks a
+different model from the same provider. Secrets are env-only, never logged.
 
 Structured JSON goes to stdout; progress goes to stderr, so the output is
 pipeable: `python main.py "..." | jq .result`
@@ -36,11 +36,13 @@ def main() -> int:
     registry.register(CALC)
 
     provider = os.environ.get("LLM_PROVIDER", "anthropic")
+    model = os.environ.get("LLM_MODEL") or None
     print(f"[agent] task: {task}", file=sys.stderr)
     print(f"[agent] provider: {provider}", file=sys.stderr)
+    print(f"[agent] model: {model or 'provider default'}", file=sys.stderr)
     print(f"[agent] tools allowlisted: {registry.names()}", file=sys.stderr)
 
-    answer = run(task, make_client(provider), registry)
+    answer = run(task, make_client(provider, model), registry)
     print(json.dumps(answer.model_dump(), indent=2))
     return 0
 
